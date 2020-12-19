@@ -5,14 +5,14 @@ import VideoItem from './VideoItem';
  * props -> ({videos})  Distruction to props.videos
  * videos.map() is a distruktion to props.videos.map()...
  */
-const VideoList = ({videos})=>{
+const VideoList = ({videos, onVideoSelect})=>{
 
   const renderedList = videos.map(video => {
-    return <VideoItem />
+    return <VideoItem onVideoSelect={onVideoSelect} video={video}/>
   })
 
   return(
-    <div>{renderedList}</div>
+    <div className="ui relaxed divided list">{renderedList}</div>
   );
 };
 
