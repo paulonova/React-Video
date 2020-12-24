@@ -6,7 +6,7 @@ state ={
   term: ''
 }
 
-onInputChange= (e)=>{
+onInputChange= (e)=>{  
   this.setState({term: e.target.value});
 }
 
